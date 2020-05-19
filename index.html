@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>The ultimate Dr. Pepper clones collection</title>
-		<meta charset="utf-8">
-		<!--<meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">--> 
-		<!--<link type="text/css" rel="stylesheet" href="../src/style_index.css">--> 
-		
-	</head>
-	<body>
-		<!-- The loading element overlays all else until the model is loaded, at which point we remove this element from the DOM with loaderAnim.remove();-->  
-		<div class="loading" id="js-loader"><div class="loader"></div></div> 
-		<div id="container"></div>
 
-	<script type="text/javascript" src="index.js"></script></body>
+<head>
+	<title>The Dr. Pepper clones virtual paradise</title>
+	<meta charset="utf-8">
+	<!--<meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">-->
+	<!--<link type="text/css" rel="stylesheet" href="../src/style_index.css">-->
+
+</head>
+
+<body>
+	<!-- The loading element overlays all else until the model is loaded, at which point we remove this element from the DOM with loaderAnim.remove();-->
+	<div class="loading" id="js-loader">
+		<div class="loader"></div>
+	</div>
+	<!-- container principal avec l'espace 3d et toutes les canettes -->
+	<div id="container">
+		<!-- container cache qui affichera 1 canette en 3D avec les informations -->
+		<div id="infoContainer">
+			<!--Le canvas virtuel pour la canette -->
+			<canvas id="c"> </canvas>
+			<!--La div contenant les informations -->
+			
+			<div class="info">
+				<h1 class="informations" id="name"></h1>
+
+				<hr />
+
+				<h2>Ingredients</h2>
+				<p class="informations" id="ingredients"></p>
+
+				<h2>Nutrition facts</h2>
+				<p class="informations" id="nutrition"></p>				
+
+				<h2>Manufacturer</h2>
+				<p class="informations" id="manufacturer"></p>
+
+				<h2>Description</h2>
+				<p class="informations" id="description"></p>
+			</div>
+			<button title="Close">✕</button>
+		</div>
+	</div>
+
+<script type="text/javascript" src="index.js"></script></body>
+
 </html>
