@@ -1,8 +1,3 @@
-//This website is just a tribute that I made for fun to the Dr. Pepper knock-offs collectors
-//Some information about the cans may not be correct, and even false. The truth is I've never had the chance to drink any of these beverages
-//Most of the pictures I used for the textures and some infos come from multiple websites : fakedrpepper.wordpress.com, skintigh.tripod.com/drpepper/index.html, angelfire.com/al/polariswatercraft/thunder.html, and some Reddit posts
-//If something bothers you, feel free to contact me
-
 import * as THREE from 'three';
 import Stats from 'three/examples/jsm/libs/stats.module.js';
 import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls.js';
