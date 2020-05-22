@@ -28,6 +28,7 @@ body {
 
   min-width: 210px;
   max-width:799px;
+  resize: horizontal;
 
 
   display: flex; /* Maniere dont est affiche son contenu */
