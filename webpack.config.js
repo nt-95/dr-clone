@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 module.exports = {
@@ -19,14 +20,17 @@ module.exports = {
             filename: 'index.html',
             template: path.resolve(__dirname, './src/template_index.html'),
             chunks: ['index']
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',            
         })
     ],
     module: {
         rules: [
-            {
+            /*{
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"] //il faut d'abord que le css-loader se declenche, puis style-loader, mais l'ordre est inverse, donc style-loader est a placer en premier
-            },
+            },*/
             {
                 test: /\.html$/,
                 use: ["html-loader"]
@@ -44,6 +48,16 @@ module.exports = {
             {
                 test: /\.(png)$/,
                 loader: 'url-loader'
+            },
+            {
+                test: /\.css$/i,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        
+                    },
+                    'css-loader'],
+
             }
         ]
     }
