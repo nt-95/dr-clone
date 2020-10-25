@@ -49,7 +49,7 @@ function main() {
     camera.position.z = 1000;
 
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x21c4ff); //0x1cb9fe skyblue
+    scene.background = new THREE.Color(0x000000); //0x21c4ff skyblue
 
     scene.add(new THREE.AmbientLight(0x555555));
 
